@@ -1,0 +1,37 @@
+{
+  "name": "ts-draw",
+  "version": "1.0.0",
+  "description": "Simple drawing application",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --hot --inline --progress --colors --no-info --content-base build/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aleksey-shmatov/ts-draw.git"
+  },
+  "keywords": [
+    "draw",
+    "vector",
+    "svg"
+  ],
+  "author": "Aleksey Shmatov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aleksey-shmatov/ts-draw/issues"
+  },
+  "homepage": "https://github.com/aleksey-shmatov/ts-draw#readme",
+  "dependencies": {
+    "eventemitter3": "^1.1.1",
+    "react": "^0.13.3",
+    "ts-observable": "aleksey-shmatov/ts-observable",
+    "ts-undoredo": "aleksey-shmatov/ts-undoredo"
+  },
+  "devDependencies": {
+    "ts-loader": "^0.5.3",
+    "typescript": "^1.6.0-beta",
+    "webpack": "^1.12.1",
+    "webpack-dev-server": "^1.10.1"
+  }
+}

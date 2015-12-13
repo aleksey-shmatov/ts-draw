@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "jsx": "react",
+        "experimentalDecorators": true,
+        "sourceMap": true
+    },
+    "files": [
+        "typings/tsd.d.ts",
+        "app/main.tsx"
+    ]
+}
