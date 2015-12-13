@@ -1,20 +1,20 @@
 import {UndoRedo} from 'ts-undoredo';
 import {Canvas} from '../model/Canvas';
 
-export class DocumentManager{
+export class DocumentManager {
 
-	private _undoredo:UndoRedo;
-	private _canvas:Canvas;
+	private _undoredo: UndoRedo;
+	private _canvas: Canvas;
 
-	public get canvas():Canvas{
+	public get canvas(): Canvas {
 		return this._canvas;
 	}
 
-	public get undoRedo():UndoRedo{
+	public get undoRedo(): UndoRedo {
 		return this._undoredo;
 	}
 
-	constructor(){
+	constructor() {
 		this._undoredo = new UndoRedo();
 		this._canvas = new Canvas();
 	}

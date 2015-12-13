@@ -1,6 +1,6 @@
 
 
-export interface ITool{
+export interface ITool {
 	activate();
 	deactivate();
 }

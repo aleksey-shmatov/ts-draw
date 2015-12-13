@@ -1,27 +1,27 @@
 import React = require('react');
 import {INotifyPropertyChanged, INotifyCollectionChanged} from 'ts-observable';
-	  
+
 export interface IModelRendererProps {
-	model: INotifyPropertyChanged;
+    model: INotifyPropertyChanged;
 }
 
-export class ObservableRenderer<T extends IModelRendererProps, S> extends React.Component<T, S> {    
+export class ObservableRenderer<T extends IModelRendererProps, S> extends React.Component<T, S> {
     componentDidMount() {
-      var model:INotifyPropertyChanged = this.props.model;
-      model.propertyChanged.listen(this.onPropertyChange, this);
+        var model: INotifyPropertyChanged = this.props.model;
+        model.propertyChanged.listen(this.onPropertyChange, this);
     }
-    
-    onPropertyChange(info){
+
+    onPropertyChange(info) {
         this.forceUpdate();
     }
-	
+
     componentWillUnmount() {
-      var model:INotifyPropertyChanged = this.props.model;
-      model.propertyChanged.unlisten(this.onPropertyChange);
+        var model: INotifyPropertyChanged = this.props.model;
+        model.propertyChanged.unlisten(this.onPropertyChange);
     }
-	
-	render(){
-		throw new Error("Render needs to be implemented in child classes");
+
+    render() {
+        throw new Error("Render needs to be implemented in child classes");
         return null;
-	}
+    }
 }
