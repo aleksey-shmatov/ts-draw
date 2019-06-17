@@ -1,13 +1,15 @@
 {
     "compilerOptions": {
-        "target": "es5",
-        "module": "commonjs",
-        "jsx": "react",
-        "experimentalDecorators": true,
-        "sourceMap": true
+      "target": "es6",
+      "lib": ["es2018", "dom"],
+      "module": "commonjs",
+      "outDir": "./lib",
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "strict": true,
+      "esModuleInterop": true,
+      "jsx": "react"
     },
-    "files": [
-        "typings/tsd.d.ts",
-        "app/main.tsx"
-    ]
+    "include": ["./src"],
+    "exclude": ["node_modules", "__tests__/*"]
 }

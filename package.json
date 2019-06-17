@@ -5,7 +5,9 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --hot --inline --progress --colors --no-info --content-base build/"
+    "dev": "webpack-dev-server --hot --inline --progress --colors --content-base build/",
+    "build": "webpack --p",
+    "lint": "eslint src/**/*.ts"
   },
   "repository": {
     "type": "git",
@@ -23,15 +25,23 @@
   },
   "homepage": "https://github.com/aleksey-shmatov/ts-draw#readme",
   "dependencies": {
-    "eventemitter3": "^1.1.1",
-    "react": "^0.13.3",
-    "ts-observable": "aleksey-shmatov/ts-observable",
-    "ts-undoredo": "aleksey-shmatov/ts-undoredo"
+    "eventemitter3": "^3.1.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "ts-observable": "github:aleksey-shmatov/ts-observable",
+    "ts-undoredo": "github:aleksey-shmatov/ts-undoredo"
   },
   "devDependencies": {
-    "ts-loader": "^0.5.3",
-    "typescript": "^1.6.0-beta",
-    "webpack": "^1.12.1",
-    "webpack-dev-server": "^1.10.1"
+    "@types/react": "^16.8.20",
+    "@types/react-dom": "^16.8.4",
+    "@typescript-eslint/eslint-plugin": "^1.10.2",
+    "@typescript-eslint/parser": "^1.10.2",
+    "eslint": "^5.16.0",
+    "eslint-plugin-react": "^7.13.0",
+    "ts-loader": "^6.0.3",
+    "typescript": "^3.5.2",
+    "webpack": "^4.34.0",
+    "webpack-cli": "^3.3.4",
+    "webpack-dev-server": "^3.7.1"
   }
 }
